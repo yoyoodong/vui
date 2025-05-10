@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 语音交互设计规范助手</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .about-section {
+            margin-bottom: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .about-section h2 {
+            font-size: 1.8rem;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .about-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-section ul {
+            margin-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .about-section li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .feedback-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        main {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>语音交互设计规范助手</h1>
+                <p class="subtitle">VUI Design Spec Assistant</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="about.html" class="active">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索规范关键词...">
+                <button id="searchBtn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="about-section">
+                <h2>关于本项目</h2>
+                <p>语音交互设计规范助手是一个专为UED设计师、交互设计师和产品经理打造的工具网站，旨在帮助他们快速查阅和理解不同平台的语音交互设计规范。</p>
+                <p>随着语音交互（VUI）在各类产品中的普及，设计师需要了解各大平台的设计规范，但这些规范分散在各自的官方文档中，语言多样，查找不便。我们的目标是将这些信息集中整理，提供清晰、准确的中文内容，让设计师可以更加高效地工作。</p>
+                <p>本网站提供的内容包括：</p>
+                <ul>
+                    <li><strong>设计规范</strong>：对官方规范中强制性或强烈建议遵循的规则进行中文提炼和总结。</li>
+                    <li><strong>设计建议</strong>：对官方提出的最佳实践、推荐做法进行中文解读。</li>
+                    <li><strong>设计要点</strong>：总结该平台VUI设计的独特之处、核心原则或需要特别注意的关键点。</li>
+                </ul>
+            </section>
+
+            <section class="about-section">
+                <h2>我们的愿景</h2>
+                <p>成为中国UED设计师首选的、最便捷高效的语音交互设计规范查询与学习平台。</p>
+            </section>
+
+            <section class="about-section">
+                <h2>内容来源</h2>
+                <p>本网站的内容基于各平台官方文档，经过专业人员的阅读、理解和中文提炼整理而成。我们尊重原始文档的知识产权，并在平台详情页提供了官方文档的链接。</p>
+                <p>我们定期检查官方文档的更新情况，确保提供的内容保持时效性。</p>
+            </section>
+
+            <section class="about-section">
+                <h2>反馈与建议</h2>
+                <p>我们非常重视您的反馈和建议，这将帮助我们不断完善网站内容和功能。如果您有任何意见、发现内容错误或有新的需求，请通过以下表单告诉我们：</p>
+                
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">您的姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">电子邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedbackType">反馈类型</label>
+                        <select id="feedbackType" name="feedbackType" required>
+                            <option value="">请选择...</option>
+                            <option value="content">内容相关</option>
+                            <option value="feature">功能建议</option>
+                            <option value="error">错误报告</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">反馈内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">提交反馈</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 语音交互设计规范助手 | 为UED设计师提供便捷的语音交互设计规范查询工具</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // 表单提交处理
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 在实际应用中，这里应该有一个AJAX请求来提交表单数据到服务器
+            // 由于这是一个前端演示，我们只是显示一个提交成功的消息
+            
+            alert('感谢您的反馈！我们将认真阅读并考虑您的建议。');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

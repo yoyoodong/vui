@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音交互设计规范助手 - VUI Design Spec Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>语音交互设计规范助手</h1>
+                <p class="subtitle">VUI Design Spec Assistant</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="pages/about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索规范关键词...">
+                <button id="searchBtn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>主流平台语音交互设计规范</h2>
+                <p>帮助UED设计师快速查阅和理解不同平台的语音交互设计规范、建议和关键要点</p>
+            </div>
+        </section>
+
+        <section class="platform-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>国际平台</h2>
+                    <p>国际主流语音交互平台的设计规范</p>
+                </div>
+                <div class="platform-grid" id="internationalPlatforms">
+                    <!-- 平台卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <section class="platform-category">
+            <div class="container">
+                <div class="category-header">
+                    <h2>国内平台</h2>
+                    <p>国内主流语音交互平台的设计规范</p>
+                </div>
+                <div class="platform-grid" id="domesticPlatforms">
+                    <!-- 平台卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 语音交互设计规范助手 | 为UED设计师提供便捷的语音交互设计规范查询工具</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

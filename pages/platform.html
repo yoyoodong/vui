@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平台详情 - 语音交互设计规范助手</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>语音交互设计规范助手</h1>
+                <p class="subtitle">VUI Design Spec Assistant</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索规范关键词...">
+                <button id="searchBtn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="#" id="categoryLink">分类</a></li>
+                    <li id="platformName">平台名称</li>
+                </ul>
+            </div>
+
+            <div class="platform-header">
+                <div class="platform-header-logo">
+                    <img id="platformLogo" src="" alt="平台Logo">
+                </div>
+                <div class="platform-header-info">
+                    <h2 id="platformTitle">平台名称</h2>
+                    <p id="platformDescription">平台描述将在这里显示...</p>
+                    <a href="#" id="officialLink" class="official-link" target="_blank">查看官方文档</a>
+                    <p class="update-date">最后更新: <span id="updateDate">2023年1月1日</span></p>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <ul>
+                    <li><button class="tab-btn active" data-tab="guidelines">设计规范</button></li>
+                    <li><button class="tab-btn" data-tab="suggestions">设计建议</button></li>
+                    <li><button class="tab-btn" data-tab="keypoints">设计要点</button></li>
+                </ul>
+            </div>
+
+            <div id="guidelines" class="tab-content active">
+                <h3>设计规范</h3>
+                <div id="guidelinesContent">
+                    <!-- 设计规范内容将通过JavaScript动态插入 -->
+                </div>
+            </div>
+
+            <div id="suggestions" class="tab-content">
+                <h3>设计建议</h3>
+                <div id="suggestionsContent">
+                    <!-- 设计建议内容将通过JavaScript动态插入 -->
+                </div>
+            </div>
+
+            <div id="keypoints" class="tab-content">
+                <h3>设计要点</h3>
+                <div id="keypointsContent">
+                    <!-- 设计要点内容将通过JavaScript动态插入 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 语音交互设计规范助手 | 为UED设计师提供便捷的语音交互设计规范查询工具</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/platform.js"></script>
+</body>
+</html> 

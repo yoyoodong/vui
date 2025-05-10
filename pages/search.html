@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果 - 语音交互设计规范助手</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>语音交互设计规范助手</h1>
+                <p class="subtitle">VUI Design Spec Assistant</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索规范关键词...">
+                <button id="searchBtn">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li>搜索结果</li>
+                </ul>
+            </div>
+
+            <div class="search-info">
+                "<span id="searchKeyword">关键词</span>"的搜索结果，共 <span id="resultCount">0</span> 条
+            </div>
+
+            <div class="search-filter">
+                <label for="platformFilter">按平台筛选：</label>
+                <select id="platformFilter">
+                    <option value="all">全部平台</option>
+                    <!-- 平台选项将通过JavaScript动态生成 -->
+                </select>
+            </div>
+
+            <div id="searchResults" class="search-results">
+                <!-- 搜索结果将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 语音交互设计规范助手 | 为UED设计师提供便捷的语音交互设计规范查询工具</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html> 

@@ -1,0 +1,180 @@
+下面是一份产品设计文档（PDD）：
+
+---
+
+**产品设计文档：语音交互设计规范助手 (VUI Design Spec Assistant)**
+
+**1. 文档目的与概述 (Document Purpose & Overview)**
+
+* **1.1 文档目的 (Document Purpose):** 本文档旨在定义“语音交互设计规范助手”网站的核心功能、目标用户、信息架构、主要页面设计概念及未来迭代方向，作为产品设计、开发与测试的依据。
+* **1.2 项目背景 (Project Background):** 随着语音交互（VUI）在各类产品中的普及，UED设计师需要快速查阅和理解不同平台（如Amazon Alexa, Google Assistant, 百度DuerOS, 阿里AliGenie等）的语音交互设计规范。目前这些规范分散在各自的官方文档中，语言不一（多为英文），查找和对比不便。本项目旨在开发一个中文的、分类清晰、易于使用的工具网站，集中展示各主流平台的VUI设计规范、建议和关键要点。
+* **1.3 产品愿景 (Product Vision):** 成为中国UED设计师首选的、最便捷高效的语音交互设计规范查询与学习平台。
+* **1.4 目标用户 (Target Users):**
+    * 主要用户：UED设计师、交互设计师、产品经理。
+    * 次要用户：对语音交互设计感兴趣的开发者、学生等。
+
+**2. 产品目标 (Product Goals)**
+
+* **2.1 核心目标 (Core Goals):**
+    * **集中化:** 将国内外主流语音平台的设计规范整合到统一平台。
+    * **易用性:** 提供清晰的分类导航和强大的搜索功能，方便用户快速定位信息。
+    * **本土化:** 所有规范的核心内容均提供准确、专业的中文描述和解读。
+    * **结构化:** 将各平台规范内容提炼为“设计规范”、“设计建议”、“设计要点”等结构化模块，便于理解和应用。
+* **2.2 次要目标 (Secondary Goals):**
+    * 提供最新行业动态和规范更新提醒。
+    * 建立一个小型VUI设计资源分享区。
+
+**3. 产品功能 (Product Features)**
+
+* **3.1 核心功能 (Core Features):**
+    * **3.1.1 平台规范浏览 (Platform Guideline Browse):**
+        * 按“国际平台”和“国内平台”进行一级分类。
+        * 各分类下以卡片或列表形式展示各个语音平台（如Amazon Alexa, Google Assistant, 百度DuerOS等）。
+        * 点击平台卡片进入该平台的专属规范详情页。
+    * **3.1.2 平台规范详情展示 (Platform Guideline Detail Display):**
+        * **头部信息:**
+            * 平台Logo和名称。
+            * 官方最新设计规范文档链接（用户提供的链接）。
+            * 简短的平台中文介绍。
+            * 规范最后更新日期（助手网站维护的日期）。
+        * **核心内容模块 (中文提炼):**
+            * **设计规范 (Design Guidelines):** 对官方规范中强制性或强烈建议遵循的规则进行中文提炼和总结。
+            * **设计建议 (Design Suggestions):** 对官方提出的最佳实践、推荐做法进行中文解读。
+            * **设计要点 (Key Design Points):** 总结该平台VUI设计的独特之处、核心原则或需要特别注意的关键点。
+      
+    * **3.1.3 关键词搜索 (Keyword Search):**
+        * 支持全局搜索，可在所有平台的规范内容（中文提炼部分）中搜索关键词。
+        * 搜索结果页清晰展示关键词命中的平台、规范模块及内容摘要。
+        * 支持按平台筛选搜索结果。
+ 
+* **3.2 辅助功能 (Supporting Features):**
+    * **3.2.1 “关于我们”与“反馈” (About & Feedback):**
+        * 项目介绍、团队信息（可选）。
+        * 用户反馈渠道（如表单或邮箱），用于收集用户对内容、功能的建议。
+    * **3.2.2 （可选）资源链接 (Resource Links):**
+        * 汇总一些通用的VUI设计文章、工具、书籍等外部优质资源。
+    * **3.2.3 （可选）更新日志 (Update Log):**
+        * 记录网站内容的更新情况，如新增平台、更新某平台规范摘要等。
+
+**4. 信息架构与网站结构 (Information Architecture & Site Structure)**
+
+```
+/ (首页 Homepage)
+    - 国际平台 (International Platforms)
+        - /platform/amazon-alexa
+            - 设计规范
+            - 设计建议
+            - 设计要点
+            - ...
+        - /platform/google-assistant
+        - /platform/apple-siri
+        - /platform/microsoft-cortana
+        - /platform/samsung-bixby
+    - 国内平台 (Domestic Platforms)
+        - /platform/baidu-dueros
+        - /platform/alibaba-aligenie
+        - /platform/tencent-xiaowei
+        - /platform/xiaomi-xiaoai
+    - /search?q={keyword} (搜索结果页 Search Results)
+    - /about (关于我们 About Us)
+    - /feedback (反馈 Feedback)
+    - /resources (资源链接 Resources - Optional)
+    - /updates (更新日志 Update Log - Optional)
+```
+
+**5. 核心用户流程 (Key User Flows)**
+
+* **5.1 用户按平台查找规范:**
+    1.  用户进入首页。
+    2.  用户选择“国际平台”或“国内平台”分类。
+    3.  用户点击目标平台卡片（如“Amazon Alexa”）。
+    4.  进入“Amazon Alexa”规范详情页。
+    5.  用户浏览“设计规范”、“设计建议”、“设计要点”等模块内容。
+    6.  用户可点击官方链接查看完整英文/原文文档。
+* **5.2 用户通过关键词搜索规范:**
+    1.  用户在首页或任意页面的搜索框输入关键词（如“错误处理”）。
+    2.  进入搜索结果页，展示所有包含“错误处理”的平台规范片段。
+    3.  用户点击某条搜索结果，跳转至对应平台的规范详情页，并高亮显示相关内容（可选）。
+
+**6. 页面设计草图/线框图概念 (Page Design Sketch/Wireframe Concepts)**
+
+* **6.1 整体风格:** 简洁、清晰、专业、易用。注重信息层级和可读性。
+* **6.2 首页 (Homepage):**
+    * **导航栏:** Logo, 搜索框, [国际平台], [国内平台], [资源(可选)], [关于我们]。
+    * **主内容区:**
+        * 醒目的标题：“语音交互设计规范助手”。
+        * 简介文字。
+        * 清晰的“国际平台”和“国内平台”入口，下方可直接展示各平台卡片。
+        * 平台卡片包含：Logo、平台名称、简短描述。
+* **6.3 平台规范详情页 (Platform Detail Page - e.g., Alexa):**
+    * **导航栏:** 同首页，可增加面包屑导航（如 首页 > 国际平台 > Amazon Alexa）。
+    * **头部区域:**
+        * 左侧：平台Logo、平台名称。
+        * 右侧：按钮链接“查看官方文档”（新标签页打开）。
+        * 下方：平台中文简介，规范最后更新日期。
+    * **内容区域 (Tab切换或长页面滚动锚点定位):**
+        * Tab 1: 设计规范 (中文)
+        * Tab 2: 设计建议 (中文)
+        * Tab 3: 设计要点 (中文)
+        * Tab 4: (可选) 特定主题 / 核心术语表
+        * 每个Tab下的内容，使用清晰的标题、列表、引用块等方式组织，方便阅读。关键信息可适当加粗。
+* **6.4 搜索结果页 (Search Results Page):**
+    * **导航栏:** 同首页。
+    * **头部:** 显示“‘关键词’的搜索结果，共X条”。
+    * **结果列表:**
+        * 每条结果包含：
+            * 平台名称 (如：Amazon Alexa)
+            * 所属模块 (如：设计建议)
+            * 内容摘要 (关键词高亮)
+            * 链接至该平台详情页的对应模块。
+    * **（可选）筛选器:** 按平台筛选。
+
+**7. 内容策略 (Content Strategy)**
+
+* **7.1 信息来源:** 以用户提供的官方链接为主要依据。
+* **7.2 内容提取与撰写:**
+    * **核心工作:** 组织VUI设计专业人员，仔细阅读各平台官方设计规范（通常为英文），理解核心思想。
+    * **中文提炼:**
+        * **非直译:** 结合中国设计师的理解习惯，用专业、简洁、准确的中文进行归纳总结。
+        * **结构化:** 按照“设计规范”、“设计建议”、“设计要点”等模块进行信息归类。
+        * **价值导向:** 突出对设计师有实际指导意义的内容。
+    * **示例:** 对于Alexa的某个规范点“When users pause, Alexa assumes they are done speaking.”
+        * **设计规范 (中文):** “用户说话停顿后，Alexa会认为用户已结束发言。应引导用户连续表达或使用明确的结束语。”
+        * **设计建议 (中文):** “设计对话时，考虑用户可能的停顿点，避免因过早结束识别导致体验不佳。对于需要较长输入的场景，可提示用户‘说完请告诉我’。”
+* **7.3 内容更新机制:**
+    * 定期（如每季度）检查官方文档是否有重大更新。
+    * 根据官方更新，及时调整网站上的中文提炼内容。
+    * 在页面显著位置或更新日志中标注内容的时效性。
+
+
+国际平台：
+Amazon Alexa:
+Alexa Design Guide : https://developer.amazon.com/en-US/alexa/alexa-haus
+Alexa Skills Kit Voice Design : https://developer.amazon.com/en-US/alexa/alexa-skills-kit
+
+Google Assistant:
+Conversation Design: https://developers.google.cn/assistant/conversation-design/welcome
+
+Apple Siri:
+人机界面指南 https://developer.apple.com/cn/design/human-interface-guidelines/
+Siri | Apple Developer Documentation:https://developer.apple.com/cn/design/human-interface-guidelines/
+
+Microsoft Cortana / Azure AI Speech services:
+Azure AI services https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/overview
+
+Samsung Bixby:
+Bixby Design Guides: https://bixbydevelopers.com/dev/docs/dev-guide/design-guides
+
+国内平台：
+百度 DuerOS:
+DuerOS开放平台 https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-design/interaction-design_markdown
+
+阿里巴巴 AliGenie (天猫精灵):
+AliGenie - 智能应用开放平台:https://www.aligenie.com/doc/357834/gnuvuy
+
+腾讯云小微 / 微信对话开放平台:
+语音技能对话设计规范:https://www.aligenie.com/doc/357834/gnuvuy
+
+小米小爱同学:
+https://developers.xiaoai.mi.com/documents/Home?type=/api/doc/render_markdown/VoiceserviceAccess/Device/platformguide
+
