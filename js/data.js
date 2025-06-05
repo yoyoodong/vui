@@ -71,7 +71,8 @@ const platforms = {
                     "利用Alexa的特性，如地理位置、时间等，提供情境相关的体验。"
                 ]
             }
-        ]
+        ],
+        tags: ["对话管理", "多模态", "语音合成"]
     },
     "google-assistant": {
         id: "google-assistant",
@@ -140,7 +141,8 @@ const platforms = {
                     "记录用户历史偏好，用于提高未来交互的准确性。"
                 ]
             }
-        ]
+        ],
+        tags: ["对话管理", "多模态", "语音合成"]
     },
     "apple-siri": {
         id: "apple-siri",
@@ -209,7 +211,8 @@ const platforms = {
                     "利用Siri建议功能，预测用户可能的需求，提供主动服务。"
                 ]
             }
-        ]
+        ],
+        tags: ["对话管理", "多模态", "唤醒技术"]
     },
     "microsoft-cortana": {
         id: "microsoft-cortana",
@@ -221,7 +224,8 @@ const platforms = {
         updateDate: "2025年5月10日",
         guidelines: [],
         suggestions: [],
-        keypoints: []
+        keypoints: [],
+        tags: ["对话管理", "语音合成"]
     },
     "samsung-bixby": {
         id: "samsung-bixby",
@@ -233,16 +237,17 @@ const platforms = {
         updateDate: "2025年5月10日",
         guidelines: [],
         suggestions: [],
-        keypoints: []
+        keypoints: [],
+        tags: ["对话管理", "唤醒技术"]
     },
 
     // 国内平台
-    "baidu-dueros": {
-        id: "baidu-dueros",
+    "dueros": {
+        id: "dueros",
         name: "百度 DuerOS",
         category: "domestic",
         description: "百度DuerOS是百度推出的对话式人工智能操作系统，为智能设备提供语音交互解决方案。",
-        logo: "images/dueros-logo.svg", // 将在SVG部分设计
+        logo: "images/dueros-logo.svg",
         officialLink: "https://dueros.baidu.com/didp/doc/dueros-bot-platform/dbp-design/interaction-design_markdown",
         updateDate: "2025年5月10日",
         guidelines: [
@@ -304,43 +309,67 @@ const platforms = {
                     "记录用户历史行为和偏好，用于提高未来交互的准确性。"
                 ]
             }
-        ]
+        ],
+        tags: ["对话管理", "多模态"],
     },
-    "alibaba-aligenie": {
-        id: "alibaba-aligenie",
+    "aligenie": {
+        id: "aligenie",
         name: "阿里巴巴 AliGenie",
         category: "domestic",
         description: "AliGenie是阿里巴巴开发的智能语音交互系统，为天猫精灵等智能硬件提供语音交互能力。",
-        logo: "images/aligenie-logo.svg", // 将在SVG部分设计
+        logo: "images/aligenie-logo.svg",
         officialLink: "https://www.aligenie.com/doc/357834/gnuvuy",
         updateDate: "2025年5月10日",
         guidelines: [],
         suggestions: [],
-        keypoints: []
+        keypoints: [],
+        tags: ["对话管理"]
     },
-    "tencent-xiaowei": {
-        id: "tencent-xiaowei",
+    "tencent": {
+        id: "tencent",
         name: "腾讯云小微",
         category: "domestic",
         description: "腾讯云小微是腾讯推出的智能语音助手，为腾讯系产品和第三方设备提供语音交互能力。",
-        logo: "images/tencent-logo.svg", // 将在SVG部分设计
+        logo: "images/tencent-logo.svg",
         officialLink: "https://www.aligenie.com/doc/357834/gnuvuy",
         updateDate: "2025年5月10日",
         guidelines: [],
         suggestions: [],
-        keypoints: []
+        keypoints: [],
+        tags: ["对话管理"]
     },
-    "xiaomi-xiaoai": {
-        id: "xiaomi-xiaoai",
+    "xiaoai": {
+        id: "xiaoai",
         name: "小米小爱同学",
         category: "domestic",
         description: "小爱同学是小米公司开发的智能语音助手，广泛应用于小米智能手机、智能音箱等产品中。",
-        logo: "images/xiaoai-logo.svg", // 将在SVG部分设计
+        logo: "images/xiaoai-logo.svg",
         officialLink: "https://developers.xiaoai.mi.com/documents/Home?type=/api/doc/render_markdown/VoiceserviceAccess/Device/platformguide",
         updateDate: "2025年5月10日",
         guidelines: [],
         suggestions: [],
-        keypoints: []
+        keypoints: [],
+        tags: ["对话管理"]
+    },
+    "dui": {
+        id: "dui",
+        name: "思必驰DUI",
+        category: "domestic",
+        description: "DUI是思必驰推出的智能语音交互平台，广泛应用于智能硬件、车载等场景。",
+        logo: "images/dui-logo.svg",
+        guidelines: [{title: "对话设计原则", content: ["遵循自然、简洁的对话风格，适应多场景应用。"]}],
+        suggestions: [{title: "平台适配建议", content: ["根据硬件特性优化语音交互体验。"]}],
+        keypoints: [{title: "DUI平台要点", content: ["支持多种终端，开放API接口。"]}]
+    },
+    "xfyun-awaken": {
+        id: "xfyun-awaken",
+        name: "科大讯飞语音唤醒",
+        category: "domestic",
+        description: "科大讯飞语音唤醒为智能设备提供高效的语音唤醒能力，适用于多种终端。",
+        logo: "images/xfyun-awaken-logo.svg",
+        guidelines: [{title: "唤醒词设计", content: ["唤醒词应简短易记，避免歧义。"]}],
+        suggestions: [{title: "误唤醒处理", content: ["优化算法，降低误唤醒率。"]}],
+        keypoints: [{title: "平台优势", content: ["高准确率，低功耗。"]}]
     }
 };
 

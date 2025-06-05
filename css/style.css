@@ -456,4 +456,37 @@ footer {
     .platform-header-logo {
         margin-bottom: 20px;
     }
+}
+
+/* 平台筛选按钮区域居中显示 */
+.platform-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  padding: 6px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #f5f6fa;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #007aff;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,122,255,0.08);
 } 

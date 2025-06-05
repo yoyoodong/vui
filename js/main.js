@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 初始化平台卡片
     initPlatformCards();
 
+    // 初始化全局筛选功能
+    initGlobalPlatformFilter();
+
     // 初始化搜索功能
     initSearch();
 });
@@ -81,6 +84,51 @@ function createPlatformCard(platform) {
     });
     
     return card;
+}
+
+/**
+ * 初始化全局平台筛选功能
+ * @description 监听全局筛选按钮点击，同时过滤国内和国际平台卡片
+ */
+function initGlobalPlatformFilter() {
+    const globalFilter = document.getElementById('globalFilter');
+    if (globalFilter) {
+        globalFilter.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                setActiveFilterBtn(globalFilter, e.target);
+                const tag = e.target.dataset.tag;
+                filterPlatformsByTag(tag, 'domestic');
+                filterPlatformsByTag(tag, 'international');
+            }
+        });
+    }
+}
+
+/**
+ * 设置当前激活的筛选按钮
+ * @param {HTMLElement} filterContainer - 筛选按钮容器
+ * @param {HTMLElement} activeBtn - 当前激活按钮
+ */
+function setActiveFilterBtn(filterContainer, activeBtn) {
+    filterContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    activeBtn.classList.add('active');
+}
+
+/**
+ * 按标签筛选并渲染平台卡片
+ * @param {string} tag - 筛选标签
+ * @param {string} category - 平台类别
+ */
+function filterPlatformsByTag(tag, category) {
+    let platforms = getPlatformsByCategory(category);
+    if (tag !== 'all') {
+        platforms = platforms.filter(p => Array.isArray(p.tags) && p.tags.includes(tag));
+    }
+    const container = document.getElementById(category === 'domestic' ? 'domesticPlatforms' : 'internationalPlatforms');
+    if (container) {
+        container.innerHTML = '';
+        renderPlatformCards(platforms, container);
+    }
 }
 
 /**
