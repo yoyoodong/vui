@@ -319,7 +319,7 @@ const platforms = {
         description: "天猫精灵Genie OS是阿里巴巴推出的智能语音交互系统，广泛应用于天猫精灵系列智能音箱和智能家居设备。",
         logo: "images/aligenie-logo.svg",
         officialLink: "https://www.aligenie.com/v7",
-        updateDate: "2025年5月10日",
+        updateDate: "2025年6月11日",
         guidelines: [
             {
                 title: "对话设计原则",
